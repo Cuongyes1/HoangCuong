@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Máy tính tình yêu</title>
+</head>
+<body>
+<h2>Máy tính tình yêu</h2>
+
+<label>Nhập tên bạn:</label>
+<input type="text" id="tenban">
+<br><br>
+
+<label>Nhập tên người ấy:</label>
+<input type="text" id="tennguoiay">
+<br><br>
+
+<button onclick="xemBoi()">Xem kết quả</button>
+
+<h3 id="ketqua"></h3>
+
+<script>
+function xemBoi() {
+let tenBan = document.getElementById("tenban").value;
+let tenNguoiAy = document.getElementById("tennguoiay").value;
+let diem = Math.floor(Math.random() * 100) + 1;
+
+if (tenBan == "" || tenNguoiAy == "") {
+document.getElementById("ketqua").innerHTML =
+"Vui lòng nhập đầy đủ tên!";
+} else if (diem > 50) {
+document.getElementById("ketqua").innerHTML =
+tenBan + " ❤️ " + tenNguoiAy +
+". Diem: " + diem +
+". Chuc mung. Hai ban rat hop nhau!";
+} else {
+document.getElementById("ketqua").innerHTML =
+tenBan + " ❤️ " + tenNguoiAy +
+". Diem: " + diem +
+". Chia tay som bat dau kho!";
+}
+}
+</script>
+</body>
+</html>

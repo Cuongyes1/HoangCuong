@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kiểm tra số chẵn lẻ</title>
+</head>
+<body>
+    <h2>Kiểm tra số chẵn - số lẻ</h2>
+
+    Nhập số nguyên:
+    <input type="number" id="so">
+
+    <button onclick="kiemTra()">Kiểm tra</button>
+
+    <p id="ketqua"></p>
+
+    <script>
+        function kiemTra() {
+            var so = Number(document.getElementById("so").value);
+
+            if (document.getElementById("so").value == "" || !Number.isInteger(so)) {
+                document.getElementById("ketqua").innerHTML = "Vui lòng nhập số nguyên hợp lệ!";
+            } else if (so % 2 == 0) {
+                document.getElementById("ketqua").innerHTML = "Đây là số chẵn";
+            } else {
+                document.getElementById("ketqua").innerHTML = "Đây là số lẻ";
+            }
+        }
+    </script>
+</body>
+</html>

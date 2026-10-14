@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Xuc xac may man</title>
+</head>
+<body>
+<h2>Xuc xac may man</h2>
+
+<button onclick="lacXucXac()">Lac xuc xac</button>
+
+<h3 id="ketqua"></h3>
+
+<script>
+function lacXucXac() {
+let diem = Math.floor(Math.random() * 6) + 1;
+
+document.getElementById("ketqua").innerHTML =
+"Ket qua xuc xac: " + diem;
+}
+</script>
+</body>
+</html>

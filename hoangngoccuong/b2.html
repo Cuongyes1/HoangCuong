@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tính tuổi</title>
+</head>
+<body>
+    <h2>Tính tuổi</h2>
+
+    Nhập năm sinh:
+    <input type="number" id="namsinh">
+
+    <button onclick="tinhTuoi()">Tính tuổi</button>
+
+    <p id="ketqua"></p>
+
+    <script>
+        function tinhTuoi() {
+            var namsinh = Number(document.getElementById("namsinh").value);
+            var namhientai = new Date().getFullYear();
+
+            if (document.getElementById("namsinh").value == "" ||
+                namsinh <= 0 || namsinh > namhientai) {
+                document.getElementById("ketqua").innerHTML = "Năm sinh không hợp lệ!";
+            } else {
+                var tuoi = namhientai - namsinh;
+                document.getElementById("ketqua").innerHTML = "Tuổi của bạn là: " + tuoi;
+            }
+        }
+    </script>
+</body>
+</html>
